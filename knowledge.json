@@ -1,0 +1,36 @@
+{
+  "negocio": "Estudio Digital Demo",
+  "saludo": "¡Hola! Soy el asistente virtual. Pregúntame por servicios, precios, horarios o deja tus datos para que te contactemos.",
+  "faqs": [
+    {
+      "id": "horarios",
+      "preguntas": ["horario", "hora", "atencion", "abierto", "dias", "sabado", "domingo"],
+      "titulo": "Horarios de atención",
+      "respuesta": "Atendemos de lunes a viernes de 8:00 a. m. a 6:00 p. m. y sábados de 9:00 a. m. a 1:00 p. m."
+    },
+    {
+      "id": "precios",
+      "preguntas": ["precio", "costo", "cuanto", "vale", "tarifa", "planes", "cotizacion"],
+      "titulo": "Precios y planes",
+      "respuesta": "Tenemos planes desde $120 USD (bot básico) hasta $350 USD (integración completa con base de datos y panel)."
+    },
+    {
+      "id": "tiempo_entrega",
+      "preguntas": ["tiempo", "demora", "cuando", "dias", "entrega", "rapido"],
+      "titulo": "Tiempos de entrega",
+      "respuesta": "Una implementación estándar queda lista y probada en 48 a 72 horas hábiles."
+    },
+    {
+      "id": "garantia",
+      "preguntas": ["garantia", "soporte", "cambio", "ajuste", "mantenimiento"],
+      "titulo": "Soporte y garantía",
+      "respuesta": "Incluye 15 días de soporte y ajustes sin costo adicional después de la entrega."
+    },
+    {
+      "id": "pagos",
+      "preguntas": ["pago", "pagar", "transferencia", "nequi", "tarjeta", "paypal", "anticipo"],
+      "titulo": "Medios de pago",
+      "respuesta": "Aceptamos transferencia bancaria, Nequi, tarjeta y PayPal (50 % al iniciar y 50 % contra entrega funcionando)."
+    }
+  ]
+}
