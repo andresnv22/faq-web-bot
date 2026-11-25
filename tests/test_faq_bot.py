@@ -47,13 +47,14 @@ def test_guardar_y_proteger_leads(client, monkeypatch):
 
     monkeypatch.delenv("ADMIN_TOKEN", raising=False)
     r_list = client.get("/leads")
-    assert r_list.status_code == 200
-    assert len(r_list.json()) == 1
-    assert r_list.json()[0]["nombre"] == "Carlos Pérez"
+    assert r_list.status_code == 401
 
     monkeypatch.setenv("ADMIN_TOKEN", "secreto")
     assert client.get("/leads").status_code == 401
-    assert client.get("/leads", headers={"Authorization": "Bearer secreto"}).status_code == 200
+    authorized = client.get("/leads", headers={"Authorization": "Bearer secreto"})
+    assert authorized.status_code == 200
+    assert len(authorized.json()) == 1
+    assert authorized.json()[0]["nombre"] == "Carlos Pérez"
 
 
 def test_widget_js_y_demo_html(client):

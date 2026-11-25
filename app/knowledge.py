@@ -109,7 +109,7 @@ def responder(pregunta: str, base: dict | None = None) -> dict:
     return {
         "respuesta": (
             f"No tengo ese dato exacto en la guía de {negocio}, pero déjame tu nombre y WhatsApp "
-            "en el formulario aquí abajo para que un asesor te responda en minutos."
+            "en el formulario aquí abajo para que un asesor te responda."
         ),
         "fuente": "fallback",
         "sugerir_lead": True,

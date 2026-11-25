@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import os
+import secrets
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -74,6 +75,6 @@ def crear_lead(req: LeadReq):
 @app.get("/leads")
 def listar_leads(authorization: str | None = Header(default=None)):
     expected = os.environ.get("ADMIN_TOKEN", "")
-    if expected and authorization != f"Bearer {expected}":
+    if not expected or not authorization or not secrets.compare_digest(authorization, f"Bearer {expected}"):
         raise HTTPException(401, "No autorizado")
     return db.listar_leads()
