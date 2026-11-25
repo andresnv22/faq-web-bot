@@ -2,6 +2,8 @@
 
 Asistente flotante listo para insertar con una sola línea `<script>` en WordPress, Shopify o cualquier web. Responde preguntas frecuentes desde `knowledge.json` (con respaldo 100 % sin API key o usando un LLM si se configura en `.env`) y captura leads en SQLite.
 
+Configura `ADMIN_TOKEN` antes de consultar `/leads`: si falta, el endpoint devuelve 401. Restringe `ALLOWED_ORIGINS` al dominio del cliente antes de exponer el widget públicamente.
+
 ## Uso rápido
 ```bash
 uv sync
